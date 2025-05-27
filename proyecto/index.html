@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="game-header">
+        <h1>🧠 Juego de Memoria</h1>
+        <div class="game-stats">
+            <div class="stat">
+                <span>Tiempo: </span>
+                <span id="timer">00:00</span>
+            </div>
+            <div class="stat">
+                <span>Movimientos: </span>
+                <span id="moves">0</span>
+            </div>
+            <div class="stat">
+                <span>Parejas: </span>
+                <span id="matches">0/8</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="difficulty-selector">
+            <label for="difficulty">Dificultad:</label>
+            <select id="difficulty">
+                <option value="easy">Fácil (4x4)</option>
+                <option value="medium">Medio (4x6)</option>
+                <option value="hard">Difícil (6x6)</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" id="newGame">Nuevo Juego</button>
+        <button class="btn btn-secondary" id="resetGame">Reiniciar</button>
+    </div>
+
+    <div class="game-board" id="gameBoard">
+        <!-- Las cartas se generarán dinámicamente con JavaScript -->
+    </div>
+
+    <div class="game-over" id="gameOver">
+        <h2>🎉 ¡Felicitaciones!</h2>
+        <p>Has completado el juego en <span id="finalTime">00:00</span> con <span id="finalMoves">0</span> movimientos.</p>
+        <button class="btn btn-primary" onclick="startNewGame()">Jugar de Nuevo</button>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
